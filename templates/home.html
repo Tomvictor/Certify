@@ -7,6 +7,21 @@
 <body>
 <h1>
     Home page
+    <br>
+
+    <form method="post" action="">
+
+        {% csrf_token %}
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="q">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">Submit
+                </button>
+            </div>
+        </div>
+    </form>
+
+
 </h1>
 </body>
 </html>
