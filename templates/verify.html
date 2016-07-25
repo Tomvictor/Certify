@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>verify | Technorip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #0E0D0D;
+        }
+
+        p {
+            color: #E7EBEE;
+            margin-top: 60px;
+            font-size: 2em;
+        }
+
+        .logo {
+            color: #0B9BED;
+        }
+
+        .form {
+            margin-top: 50px;
+
+            margin-bottom: 50px;
+        }
+
+        form {
+            margin: 4em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <h2><p><span class="logo">Technorip</span> verification console</p></h2>
+            <div class="col-sm-6 col-sm-offset-3 form">
+                <form action="" method="post" class="form-inline" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+
+                        <input type="text" class="form-control input-lg" id="code" placeholder="Enter Your Code">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <br>
+                </form>
+
+
+            </div>
+        </div><!-- End of div col -->
+    </div><!-- End of div row -->
+    <center>
+        <footer>
+            <h5> © Copyright 2016 by Technorip. All Rights Reserved.</h5>
+        </footer>
+    </center>
+</div><!-- End of container div -->
+
+</body>
