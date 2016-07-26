@@ -5,7 +5,7 @@ from mysite.models import Candidate
 
 def Home(request):
     query = request.POST.get("q")
-    print(query)
+    #print(query)
     if query:
         CandidateDetails = get_object_or_404(Candidate, VerificationCode = query)
         return render(request,'page.html',{"item":CandidateDetails})
