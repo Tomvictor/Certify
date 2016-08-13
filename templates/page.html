@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>page | Technorip</title>
+  <title>Technorip | {{ item.FirstName }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -10,6 +10,10 @@
   <style>
   body{
     background-color: #0E0D0D;
+
+  }
+  a{
+      text-decoration: none;
   }
   .col-sm-10{
     background-color: #FFFFFF;
@@ -53,29 +57,32 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 ">
-       <h2><p><center><span class="logo text-center">Technorip</span> verification </center></p></h2>
+       <h2><p><center><span class="logo text-center"><a href="http://verify.technorip.com/">Technorip</a> </span> verification </center></p></h2>
        <div class="col-sm-10 col-sm-offset-1"><br><br>
        <center><p><b>Verification Code:</b> <b class="logo">{{ item.VerificationCode }}</b></p></center>
        <div class="col-sm-4">
-         <img src="{{ item.ProfilePicture.url }}" class="img-thumbnail" alt="Cinque Terre" width="260" height="265">
+       <!--  <img src="{{ item.ProfilePicture.url }}" class="img-thumbnail" alt="Cinque Terre" width="260" height="265">   -->
          </div>
          <div class="col-sm-8 details">
          
          <h2><label for="nmae">{{ item.FirstName }} {{ item.LastName }}</label></h2>
-         <p>Address: {{ item.Address }}</p>
-         <p>Email : {{ item.Mail }}<br>
-         Mobile : {{ item.Phone }}</p>
+         <p><b>   Address : </b>{{ item.Address }}</p>
+         <p> <b>Email : </b>{{ item.Mail }}<br>
+        <!--  Mobile : {{ item.Phone }} -->
+         </p>
+             <p>
+                <b>Duration : </b>  {{ item.FromDate }}   to   {{ item.ToDate }}
+             </p>
          </div>
          <hr>
          <div class="course col-sm-12">
            <center><u><h4>Course Details</h4></u></center>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta qui similique culpa non, doloribus laboriosam dolore omnis saepe sint quia, numquam esse cum nihil deserunt ullam ipsa quidem vitae.
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tempore esse beatae commodi perspiciatis iure quibusdam repellat minima doloribus hic cum, impedit provident vitae distinctio quae, architecto, atque asperiores delectus.</p>
+           <p>{{ item.Notes|safe }}</p>
          </div>
          <div class="col-sm-12">
            <!-- 16:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-16by9 embed-center">
-  <iframe class="embed-responsive-item" src="media/{{ item.Certificate }}"  frameborder="0"> > </iframe>
+  <iframe class="embed-responsive-item" src="http://verify.technorip.com/media/{{ item.Certificate }}"  frameborder="0"> > </iframe>
 </div>
          </div>
        </div>
@@ -85,7 +92,7 @@
    
   </div><!-- End of container div -->
   <center><footer class="container-fluid">
-     <h5> © Copyright 2016 by Technorip. All Rights Reserved.</h5>
+     <h5> © Copyright 2016 by <a href="http://www.technorip.com/">Technorip</a> . All Rights Reserved.</h5>
     </footer></center>
 
 </body>
